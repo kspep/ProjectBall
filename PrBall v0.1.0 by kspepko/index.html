@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Bacteria Simulation</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        #gameCanvas {
+            border: 2px solid #fff;
+            background-color: #222;
+            margin: 10px;
+        }
+        #controls {
+            padding: 10px;
+            max-width: 300px;
+            font-family: CO;
+        }
+        select, input, button {
+            margin: 5px 0;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #555;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #666;
+        }
+        button.active {
+            background-color: #888;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="1200" height="800"></canvas>
+    <div id="controls">
+        <h2>Controls</h2>
+        <select id="teamSelect">
+            <option value="yellow">Yellow</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="pink">Pink</option>
+        </select>
+        <input type="number" id="generationInput" placeholder="Generation" min="0" value="0">
+        <select id="mutationSelect">
+            <option value="">No Mutation</option>
+            <option value="explosiveDeath">Explosive Death</option>
+            <option value="fastReproduction">Fast Reproduction</option>
+            <option value="fertileDeath">Fertile Death</option>
+        </select>
+        <input type="number" id="maxBacteriaInput" placeholder="Max Bacteria per Team" min="1" value="150">
+        <button onclick="spawnBacterium()">Add Bacterium</button>
+        <button onclick="spawnAllTeams()">Spawn All Teams</button>
+        <button onclick="restart()">Restart</button>
+        <button id="killButton">Kill Bacterium</button>
+        <button id="dragButton">Drag Bacterium</button>
+        <input type="number" id="spawnIntervalInput" placeholder="Spawn Interval (seconds)" min="1" value="10">
+        <button id="randomSpawnButton">Random Spawn</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
