@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Bacteria Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <canvas id="gameCanvas" width="1200" height="800"></canvas>
+        <div id="controls">
+            <h2>Controls</h2>
+            <div class="control-block">
+                <label for="teamSelect">Team</label>
+                <select id="teamSelect">
+                    <option value="yellow">Yellow</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="pink">Pink</option>
+                </select>
+            </div>
+            <div class="control-block">
+                <label for="generationInput">Generation</label>
+                <input type="number" id="generationInput" placeholder="Generation" min="0" value="0">
+            </div>
+            <div class="control-block">
+                <label for="mutationSelect">Mutation</label>
+                <select id="mutationSelect">
+                    <option value="">No Mutation</option>
+                    <option value="explosiveDeath">Explosive Death</option>
+                    <option value="fastReproduction">Fast Reproduction</option>
+                    <option value="fertileDeath">Fertile Death</option>
+                </select>
+            </div>
+            <div class="control-block">
+                <label for="maxBacteriaInput">Max Bacteria per Team</label>
+                <input type="number" id="maxBacteriaInput" placeholder="Max Bacteria per Team" min="1" value="150">
+            </div>
+            <button onclick="spawnBacterium()">Add Bacterium</button>
+            <button onclick="spawnAllTeams()">Spawn All Teams</button>
+            <button onclick="restart()">Restart</button>
+            <button id="killButton">Kill Bacterium</button>
+            <button id="dragButton">Drag Bacterium</button>
+            <div class="control-block">
+                <label for="spawnIntervalInput">Spawn Interval (seconds)</label>
+                <input type="number" id="spawnIntervalInput" placeholder="Spawn Interval (seconds)" min="1" value="10">
+            </div>
+            <button id="randomSpawnButton">Random Spawn</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
