@@ -25,6 +25,8 @@
 
 ![изображение](https://github.com/user-attachments/assets/3b41e6c5-a4bf-40aa-b031-6e95a6a30ed0)
 
+![изображение](https://github.com/user-attachments/assets/b0e70338-c671-41a7-a9c9-d69710fb3fce)
+
 
 Как запустить?
 
